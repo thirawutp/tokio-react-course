@@ -2,6 +2,28 @@ import React from 'react'
 import styles from './ListPage.scss'
 
 class ListPage extends React.Component {
+  state = {
+    apps: [
+      {
+        appId: 'aaa-111',
+        fname: 'aaa',
+        lname: '111',
+        status: 'dr'
+      }, 
+      {
+        appId: 'bbb-222',
+        fname: 'bbb',
+        lname: '222',
+        status: 'dr'
+      }, 
+      {
+        appId: 'ccc-333',
+        fname: 'ccc',
+        lname: '333',
+        status: 'sm'
+      }, 
+    ]
+  }
   render() {
     return (
       <div>
@@ -25,18 +47,12 @@ class ListPage extends React.Component {
         {/* applist */}
         <div className={styles['app-list']}>
           <div className={styles['list']}>
-            <div className={styles['item']}>
-              appId: aaa-111
-              status: dr
-            </div>
-            <div className={styles['item']}>
-              appId: bbb-222
-              status: sm
-            </div>
-            <div className={styles['item']}>
-              appId: ccc-333
-              status: sm
-            </div>
+            {this.state.apps.map(app =>
+              <div className={styles['item']} key={app.appId}>
+                appId: {app.appId}
+                status: {app.status}
+              </div>
+            )}
           </div>
         </div>
 
