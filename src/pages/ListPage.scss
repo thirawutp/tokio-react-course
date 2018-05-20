@@ -1,0 +1,135 @@
+.header-bar {
+  text-align: center;
+  background: #0D98BA;
+  color: #fff;
+  div {
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    font-weight: bold;
+  }
+}
+
+.filter-bar {
+  margin: 0.2rem 0 ;
+  padding: 0.5rem;
+  background: #0D98BA;
+  color: #fff;
+  label {
+    margin: 0 1rem;
+    color: #fff;
+  }
+  input {
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #555;
+    padding: 0.2rem 0.5rem;
+  }
+  select {
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    color: #555;
+  }
+  button {
+    float: right;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #0D98BA;
+    color: yellow;
+    cursor: pointer;
+    &:hover {
+      background: yellow;
+      color: #0D98BA;
+    }
+  }
+}
+
+.app-list {
+  float: left;
+  width: 40%;
+  background: #dbdbdb;
+  height: 30rem;
+  .list {
+    padding: 1rem;
+    .item {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      color: #555;
+      background: #fff;
+      .active {
+        color: #fff;
+        background: #0D98BA;
+      }
+      &:hover {
+        background: #0D98BA;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.app-detail {
+  background: #dbdbdb;
+  height: 30rem;
+  float: right;
+  width: 60%;
+  .container {
+    margin: 1rem;
+    border: solid #fff 1px;
+    border-radius: 25px;
+    height: 90%;
+    position: relative;
+    .title {
+      color: #0D98BA;
+      text-align: center;
+      margin: 1rem 0rem;
+      font-size: 1.5rem;
+    }
+    .label-group {
+      color: #fff;
+      margin: 1rem;
+      font-size: 1rem;
+      .title {
+        color: #0D98BA;
+      }
+      .text {
+        margin-left: 1rem;
+        color: #555;
+      }
+    }
+    .control-bar {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        float: right;
+        cursor: pointer;
+        outline: none;
+        &.delete-btn {
+          color: red;
+          &:hover {
+            color: #fff;
+            background: red;
+          }
+        }
+        &.edit-btn {
+          margin-right: 1rem;
+          color: #0D98BA;
+          &:hover {
+            color: #fff;
+            background: #0D98BA;
+          }
+        }
+      }
+    }
+  }
+}
